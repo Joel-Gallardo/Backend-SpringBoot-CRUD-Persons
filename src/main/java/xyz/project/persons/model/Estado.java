@@ -7,10 +7,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 
+import java.io.Serializable;
+
+@Data
 @Entity
 @Table (name = "estado")
-public class Estado {
+public class Estado implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,7 +23,8 @@ public class Estado {
 	@JoinColumn(name="id_pais")
 	private Pais pais;
 	private String nombre;
-	
+
+/*
 	public Estado() {
 	}
 	
@@ -60,5 +65,5 @@ public class Estado {
 	}
 
 
-	
+	*/
 }

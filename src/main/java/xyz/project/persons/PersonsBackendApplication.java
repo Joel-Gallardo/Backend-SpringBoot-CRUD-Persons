@@ -12,7 +12,8 @@ public class PersonsBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PersonsBackendApplication.class, args);
 	}
-	
+
+	//permitir CORS para evitar error de CORS
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
